@@ -23,5 +23,7 @@ void createControlGruop( ) {
 }
 void handleButtonEvents(GButton button, GEvent event) {
 //setTAMensaje(name+": "+txfMessage.getText());
-c.write(name+": "+txfMessage.getText());
+if(button==bSend&&event==GEvent.PRESSED){
+  c.write(name+": "+txfMessage.getText());
+}
 }
