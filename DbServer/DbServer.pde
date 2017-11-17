@@ -6,6 +6,7 @@ Server s;
 Client c;
 String input;
 MySQL msql;
+String data [];
 
 void setup() {
   size(450, 255);
@@ -31,7 +32,14 @@ void draw(){
   c = s.available();
   if(c != null){
     input = c.readString();
-    
-    s.write(input);
+    input.substring(0, input.indexOf("\n")); // Only up to the newline
+    //s.write(input);
+    data = split(input,' ');
+    if(data[0].equals("add")==true)
+      addUsuario(data[1],data[2]);
+    else if(data[0].equals("get")==true){
+      String str = getUsuario(data[1]);
+      s.write(str);
+    }
   }
 }

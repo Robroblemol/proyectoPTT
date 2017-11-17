@@ -5,5 +5,6 @@ void addUsuario(String name,String pass ) {
 String getUsuario(String name){
   msql.query("SELECT name, pass FROM usuarios WHERE name ="+name);
   msql.next();
-  return msql.getString(1)+" "+msql.getString(2);
+  //return msql.getString(1)+" "+msql.getString(2);
+  return msql.getString(2);
 }
