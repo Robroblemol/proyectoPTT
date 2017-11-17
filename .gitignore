@@ -7,4 +7,5 @@ application.windows32
 application.windows64
 application.macosx
 ChatClient/build
-ChatServer/build  
+ChatServer/build
+DbServer/build

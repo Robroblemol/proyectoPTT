@@ -1,0 +1,23 @@
+import processing.net.*;
+Server s;
+Client c;
+String input;
+void setup() {
+  size(450, 255);
+  background(204);
+  stroke(0);
+  frameRate(5); // Slow it down a little
+  s = new Server(this,12346); // Start a simple server on a port
+  s.write("conexion a Dbserver");
+}
+void draw(){
+  if (mousePressed == true){
+      s.write("DbServer: Servidor DB ");
+      // println("server: "+s);
+    }
+  c = s.available();
+  if(c != null){
+    input = c.readString();
+    s.write(input);
+  }
+}
