@@ -1,7 +1,7 @@
 import processing.net.*;
 
 Client c;
-String input,name;
+String input,name="C1";
 
 
 void setup()

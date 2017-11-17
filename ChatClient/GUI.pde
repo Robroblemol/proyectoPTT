@@ -19,5 +19,9 @@ void createControlGruop( ) {
 
   txa1 = new GTextArea(this, 10, 105, 445, 100,G4P.SCROLLBARS_BOTH);
   txa1.tag = "txa1";
-  
+
+}
+void handleButtonEvents(GButton button, GEvent event) {
+//setTAMensaje(name+": "+txfMessage.getText());
+c.write(name+": "+txfMessage.getText());
 }
