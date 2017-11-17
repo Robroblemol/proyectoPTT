@@ -17,7 +17,7 @@ void createControlGruop( ) {
   txfMessage.tag = "txfMessage";
   txfMessage.setPromptText("Escriba aqui perro");
 
-  txa1 = new GTextArea(this, 10, 105, 445, 100,G4P.SCROLLBARS_BOTH);
+  txa1 = new GTextArea(this, 10, 105, 445, 100,G4P.SCROLLBARS_VERTICAL_ONLY);
   txa1.tag = "txa1";
 
 }
