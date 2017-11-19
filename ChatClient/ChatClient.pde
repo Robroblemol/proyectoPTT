@@ -28,19 +28,28 @@ void draw( ) {
  if(c1.available() > 0){
    input = c1.readString();
    print(input);
-   input.substring(0, input.indexOf("\n")); // Only up to the newline
-   data = split(input,' ');
-   if(data[0].equals("server:") == true){
-     print("data 1:"+data[1]+"|");
-     print("data 2:"+data[2]+"|");
-     verifiLog(data[1],data[2]);
-   }
-   //setTAMensaje(input);
- }
- if(flagLog){
-   showControls();
-   window.setVisible(false);
- }
+try{
+    input.substring(0, input.indexOf("\n")); // Only up to the newline
+    data = split(input,' ');
+    if(data[0].equals("server:") == true){
+      print("data 1:"+data[1]+"|");
+      println("data 2:"+data[2]+"|");
+      verifiLog(data[1],data[2]);
+    }
+  //setTAMensaje(input);
+  }catch(StringIndexOutOfBoundsException e){
+    println("error String: "+ e);
+    G4P.showMessage(this,
+    "Verifique nombre se usuario y contraseña",
+    "Error login",
+    G4P.ERROR );
+  }
+
+  }
+  if(flagLog){
+    showControls();
+    window.setVisible(false);
+  }
 }
 void verifiLog(String n,String p ) {
   println("n:"+name.equals(n)+" \n"

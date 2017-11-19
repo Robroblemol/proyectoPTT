@@ -10,4 +10,5 @@ void sendRegistro(String coman ) {
   pass=p+'\n';
   println(coman+" "+u+" "+p+"\n");
   c1.write(coman+" "+u+" "+p+"\n");
+  surface.setTitle("Cliente-"+name);
 }
