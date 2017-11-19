@@ -21,7 +21,7 @@ String user     = "root";
 String pass     = "1234";
 String database = "login";
 msql = new MySQL( this, "localhost:3306", database, user, pass );
-
+if(msql.connect()){ println("conexion a DB!!");}
 
 }
 void draw(){
