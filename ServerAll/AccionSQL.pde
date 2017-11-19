@@ -1,12 +1,17 @@
 void addUsuario(String n,String p) {
   println("INSERT INTO usuarios (name,pass) VAlUES ('"+n+"','"+p+"')");
+  respUsuario(n);
   //msql.query("INSERT INTO usuarios (name,pass) VAlUES ('"+n+"','"+p+"')");
   //msql.next();
 }
-String getUsuario(String name){
-//  msql.query("SELECT name, pass FROM usuarios WHERE name ="+name);
-//  msql.next();
-  //return msql.getString(1)+" "+msql.getString(2);
-//  return msql.getString(2);
-    return "fool";
+String getUsuario(String n){
+  msql.query("SELECT name, pass FROM usuarios WHERE name = '"+n+"'");
+  msql.next();
+  println(msql.getString(1)+" "+msql.getString(2));
+  return msql.getString(1)+" "+msql.getString(2);
+  //  return "fool";
+}
+void respUsuario(String n){
+    String r = getUsuario(n);
+    sdb.write(r);
 }

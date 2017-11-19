@@ -25,7 +25,7 @@ void draw( ) {
  }
  if(c1.available() > 0){
    input = c1.readString();
-   println("cliente: "+input);
-   setTAMensaje(input);
+   println("servidor: "+input);
+   //setTAMensaje(input);
  }
 }
