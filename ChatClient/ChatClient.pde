@@ -1,6 +1,6 @@
 import processing.net.*;
 import de.bezier.data.sql.*;
-import java.net.ConnectException;
+import java.net.ConnectException.*;
 //import java.net.SQLException;
 
 Client c,c1;

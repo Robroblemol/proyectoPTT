@@ -9,3 +9,4 @@ application.macosx
 ChatClient/build
 ChatServer/build
 DbServer/build
+ServerAll/build

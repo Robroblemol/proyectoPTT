@@ -22,6 +22,7 @@ public class ServerAll extends PApplet {
 
 
 
+
 Server sc,sdb;
 Client cc,cdb;
 String input;
@@ -53,6 +54,20 @@ public void draw(){
       input = cc.readString();
       sc.write(input);
     }
+    cdb = sdb.available();
+    if(cdb != null){
+    input = cdb.readString();
+    input.substring(0, input.indexOf("\n")); // Only up to the newline
+    //s.write(input);
+    data = split(input,' ');
+    if(data[0].equals("add")==true)
+      addUsuario(data[1],data[2]);
+    else if(data[0].equals("get")==true){
+      String str = getUsuario(data[1]);
+      sdb.write(str);
+    }
+  }
+
 }
 public void addUsuario(String name,String pass ) {
   msql.query("INSERT INTO usuarios (name,pass) VAlUES ("+name+","+pass+")" );
@@ -64,7 +79,7 @@ public String getUsuario(String name){
   //return msql.getString(1)+" "+msql.getString(2);
   return msql.getString(2);
 }
-  public void settings() {  size(450, 255); }
+  public void settings() {  size(100, 100); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "ServerAll" };
     if (passedArgs != null) {
