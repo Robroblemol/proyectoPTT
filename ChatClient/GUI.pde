@@ -40,6 +40,7 @@ if(button==bIniciar&&event==GEvent.PRESSED){
     window.setVisible(false);
   }
   if(button==bRegistar&&event==GEvent.PRESSED){
+      sendRegistro();
       showControls();
       window.setVisible(false);
     }
