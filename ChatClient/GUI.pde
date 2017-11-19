@@ -1,5 +1,6 @@
 import g4p_controls.*;//importamos libreria
-GTextField txfMessage,txfUsuario,txfPass;
+GTextField txfMessage,txfUsuario;
+GPassword txfPass;
 GButton bSend,bRegistar,bIniciar;
 GTextArea txa1;
 GWindow window;
@@ -53,8 +54,9 @@ void newWindow(){
   window.addDrawHandler(this, "drawWin");
   txfUsuario = new GTextField(window,70,60,100,20);
   txfUsuario.setPromptText("Usuario");
-  txfPass = new GTextField(window,70,90,120,20);
-  txfPass.setPromptText("Contraseña");
+  txfPass = new GPassword(window,70,90,120,20);
+  txfPass.tag="txfPass";
+  txfPass.setMaxWordLength(20);
   bIniciar = new GButton(window,80,125,100,35,"Ingresar");
   bIniciar.fireAllEvents(true);
   bRegistar = new GButton(window,80,177,100,35,"Registrar");
