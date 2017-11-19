@@ -1,4 +1,7 @@
 import processing.net.*;
+import de.bezier.data.sql.*;
+import java.net.ConnectException;
+//import java.net.SQLException;
 
 Client c,c1;
 String input,name="C1";
@@ -11,9 +14,7 @@ void setup()
   stroke(0);
   frameRate(5); // Slow it down a little
   initGui();
-  // Connect to the server's IP address and port
-  c = new Client(this, "127.0.0.1", 12345); // Replace with your server's IP and port
-  c1 = new Client(this, "127.0.0.1", 12346); // Replace with your server's IP and port
+  intiConexion();
 }
 void draw( ) {
   background(204);
