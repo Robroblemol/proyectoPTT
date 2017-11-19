@@ -13,5 +13,6 @@ String getUsuario(String n){
 }
 void respUsuario(String n){
     String r = getUsuario(n);
-    sdb.write(r);
+    sdb.write("server: "+r);
+    //sdb.write("server: "+r+"\n");
 }

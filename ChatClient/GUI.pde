@@ -41,8 +41,6 @@ if(button==bIniciar&&event==GEvent.PRESSED){
   }
   if(button==bRegistar&&event==GEvent.PRESSED){
       sendRegistro();
-      showControls();
-      window.setVisible(false);
     }
 }
 void showControls(){

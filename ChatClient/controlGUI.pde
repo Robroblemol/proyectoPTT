@@ -6,6 +6,8 @@ void setTAMensaje (String s) {
 void sendRegistro( ) {
   String p =txfPass.getPassword();
   String u =txfUsuario.getText();
+  name=u;
+  pass=p+'\n';
   println("add "+u+" "+p+"\n");
   c1.write("add "+u+" "+p+"\n");
 }
