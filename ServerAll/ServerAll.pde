@@ -43,8 +43,8 @@ void draw(){
     if(data[0].equals("add")==true)
       addUsuario(data[1],data[2]);
     else if(data[0].equals("get")==true){
-      String str = getUsuario(data[1]);
-      sdb.write(str);
+      respUsuario(data[1]);
+      //sdb.write(str);
     }
   }
 

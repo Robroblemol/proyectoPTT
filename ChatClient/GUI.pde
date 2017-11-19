@@ -36,11 +36,10 @@ if(button==bSend&&event==GEvent.PRESSED){
   txfMessage.setText("");
 }
 if(button==bIniciar&&event==GEvent.PRESSED){
-    showControls();
-    window.setVisible(false);
+    sendRegistro("get");
   }
   if(button==bRegistar&&event==GEvent.PRESSED){
-      sendRegistro();
+      sendRegistro("add");
     }
 }
 void showControls(){
