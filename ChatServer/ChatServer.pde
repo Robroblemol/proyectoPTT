@@ -5,7 +5,7 @@ Client c;
 String input;
 
 void setup() {
-  size(450, 255);
+  size(100, 100);
   background(204);
   stroke(0);
   frameRate(5); // Slow it down a little

@@ -14,8 +14,8 @@ void setup() {
   background(204);
   stroke(0);
   frameRate(5); // Slow it down a little
-  sc = new Server(this,12345); // Servicio chat
-  sdb = new Server(this,12346);// servicio login
+  sc = new Server(this,12355); // Servicio chat
+  sdb = new Server(this,12356);// servicio login
 
     String user     = "root";
     String pass     = "1234";

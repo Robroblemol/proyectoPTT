@@ -9,7 +9,7 @@ MySQL msql;
 String data [];
 
 void setup() {
-  size(450, 255);
+    size(100, 100);
   background(204);
   stroke(0);
   frameRate(5); // Slow it down a little
@@ -38,8 +38,9 @@ void draw(){
     if(data[0].equals("add")==true)
       addUsuario(data[1],data[2]);
     else if(data[0].equals("get")==true){
-      String str = getUsuario(data[1]);
-      s.write(str);
+      respUsuario(data[1]);
+      //String str = getUsuario(data[1]);
+      //s.write(str);
     }
   }
 }

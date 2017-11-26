@@ -20,7 +20,7 @@ void createControlGruop( ) {
 
   txfMessage = new GTextField(this,10,215,330,35);
   txfMessage.tag = "txfMessage";
-  txfMessage.setPromptText("Escriba aqui perro");
+  txfMessage.setPromptText("Escriba aqui");
   txfMessage.setVisible(false);
 
   txa1 = new GTextArea(this, 10, 105, 445, 100,G4P.SCROLLBARS_VERTICAL_ONLY);
